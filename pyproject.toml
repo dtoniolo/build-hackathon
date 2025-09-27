@@ -5,6 +5,7 @@ requires-python = ">=3.13,<3.14"
 dependencies = [
 "loguru>=0.7,<0.8",
 "mypy>=1.18,<1.19",
+"pydantic>=2.11,<2.12",
 "ruff>=0.13,<0.14",
 "tomlkit>=0.13,<0.14",
 ]
