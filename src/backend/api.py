@@ -1,16 +1,32 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 
-from src.backend.file_to_metrics import parse_excel_to_metrics
+from src.backend.file_to_metrics import parse_excel_to_metrics, parse_text_to_metrics
 
 app = FastAPI(title="Investor Reporting API", version="0.1")
 
 
 @app.post("/file")
-async def upload_excel(file: UploadFile = File(...)):
+async def parse_startup_report(file: UploadFile = File(...)):
     try:
         file_bytes = await file.read()
-        metrics = parse_excel_to_metrics(file_bytes)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Couldn't read file: {str(e)}")
+    try:
+        file_content = file_bytes.decode("utf-8")
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Couldn't decode file: {str(e)}")
+    if file.filename is None:
+        raise HTTPException(status_code=400, detail="File name is required")
+    else:
+        file_name = file.filename
+    try:
+        if file_name.endswith((".xlsx", ".xls")):
+            metrics = parse_excel_to_metrics(file_content)
+        else:
+            # Assume text/CSV file parsing
+            file_content = file_bytes.decode("utf-8")
+            metrics = parse_text_to_metrics(file_content)
         return JSONResponse(content=metrics.model_dump())
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Failed to parse Excel: {str(e)}")
