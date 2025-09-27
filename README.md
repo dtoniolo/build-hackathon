@@ -8,6 +8,7 @@ We use [`uv`](https://docs.astral.sh/uv/) as our package manager. See [here](htt
 
 ## Usage
 - You can run the CI checks with the `uv run pre_commit_script.py` command.
+- You can run the backend with the `uv run fastapi dev src/backend/ --port 8001` command.
 
 ## Project Structure
 
