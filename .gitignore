@@ -4,3 +4,4 @@ __pycache__/
 
 .env
 /src/backend/test_parsing/outputs/
+db.json
