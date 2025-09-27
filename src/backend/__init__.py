@@ -21,7 +21,7 @@ def lifespan(app: FastAPI):
 app = FastAPI(title="Investor Reporting API", version="0.1")
 
 
-@app.post("/file")
+@app.post("/startup-report/file")
 async def parse_startup_report(file: UploadFile = File(...)):
     try:
         file_bytes = await file.read()
