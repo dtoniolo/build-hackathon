@@ -47,5 +47,7 @@ hackathon/
 * Receive alerts for red flags (e.g. <12 months runway), to act quickly
 * Export portfolio data, to include in LP reports
 * Configure which KPIs are required, to keep reporting consistent
+* Upload or manually enter KPI data on behalf of founders, when founders provide data outside the system (e.g. by email), so the portfolio remains complete and up to date
+
 
 
