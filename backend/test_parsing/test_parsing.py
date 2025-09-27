@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from src.backend import file_to_metrics
+from .. import file_to_metrics
 
 BASE_DIR = Path(__file__).resolve().parent
 TEMPLATE_PATH = BASE_DIR.parent / "template.txt"

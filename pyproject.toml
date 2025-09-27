@@ -7,10 +7,17 @@ dependencies = [
 "fastapi[standard]>=0.117,<0.118",
 "loguru>=0.7,<0.8",
 "mypy>=1.18,<1.19",
+"openai>=1.109,<1.110",
+"pandas>=2.3,<2.4",
+"pandas-stubs>=2.2,<2.3",
 "pydantic>=2.11,<2.12",
+"reflex>=0.8,<0.9",
+"requests>=2.32,<2.33",
 "ruff>=0.13,<0.14",
 "tomlkit>=0.13,<0.14",
-"pandas-stubs>=2.2,<2.3",
-"pandas>=2.3,<2.4",
-"openai>=1.109,<1.110"
+
+"types-requests",
 ]
+
+[project.scripts]
+gui = "frontend:create_app"

@@ -3,7 +3,7 @@ from openai import OpenAI
 
 from dotenv import load_dotenv
 
-from src.commons import FormData
+from commons import FormData
 
 load_dotenv()
 

@@ -1,15 +1,8 @@
 import json
-from enum import Enum, unique
 
 from pydantic import BaseModel
 
-from ..commons import FormData
-
-
-@unique
-class SubmissionState(Enum):
-    DRAFT = "draft"
-    FINALIZED = "finalized"
+from commons import FormData, SubmissionState
 
 
 class Report(BaseModel):

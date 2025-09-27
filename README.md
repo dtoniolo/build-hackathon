@@ -8,15 +8,19 @@ We use [`uv`](https://docs.astral.sh/uv/) as our package manager. See [here](htt
 
 ## Usage
 - You can run the CI checks with the `uv run pre_commit_script.py` command.
-- You can run the backend with the `uv run fastapi dev src/backend/ --port 8001` command.
+- You can run the backend with the `uv run fastapi dev backend/ --port 8001` command.
+- You can start the GUI by running the `uv run reflex run` command.
 
 ## Project Structure
 
 ```
 hackathon/
-├── src/                 # Source code
+├── backend/             # Source code for the backend
+├── commons/             # Data structures and logic that's shared between the frontend and the backend
+├── frontend/            # Source code for the frontend
 ├── pre_commit_script.py # Runs the CI
-└── pyproject.toml       # Project file
+├── pyproject.toml       # Project file
+└── rxconfig.py          # Configuration file for the GUI
 ```
 
 ---

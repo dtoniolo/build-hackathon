@@ -4,7 +4,7 @@ from typing import Optional
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 
-from ..commons import FormData
+from commons import FormData
 from .db import Report, SubmissionState, load_db, save_db
 from .file_to_metrics import parse_excel_to_metrics, parse_text_to_metrics
 
