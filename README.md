@@ -56,6 +56,10 @@ Long-term, this approach could become the default schema for portfolio reporting
   - [Canva Pitch Deck](https://www.canva.com/design/DAG0La-uW4Q/rCI_mCOrrr8JycOZsCY6PQ/edit?utm_content=DAG0La-uW4Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
   - DALL·E for concept illustrations and UI mockups used in the presentation  
 
+## Project Structure  
+
+
+
 ---
 
 ## User Stories  
