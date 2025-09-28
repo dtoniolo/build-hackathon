@@ -1,4 +1,5 @@
 from contextlib import asynccontextmanager
+from typing import Optional
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
@@ -49,11 +50,18 @@ async def parse_startup_report(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail=f"Failed to parse Excel: {str(e)}")
 
 
-@app.post("/startup-report/draft")
-async def uplod_draft(form_data: FinancialBusinessMetrics):
-    db.append(Report(form_data=form_data, state=SubmissionState.DRAFT))
+@app.post("/startup-report/")
+async def uplod_draft(report: Report):
+    db.append(report)
 
 
-@app.post("/startup-report/final")
-async def uplod_final(form_data: FinancialBusinessMetrics):
-    db.append(Report(form_data=form_data, state=SubmissionState.FINALIZED))
+@app.get("/startup-report")
+async def get_current_draft() -> Optional[FinancialBusinessMetrics]:
+    try:
+        report = db[-1]
+        if report.state == SubmissionState.DRAFT:
+            return report.form_data
+        else:
+            return None
+    except IndexError:
+        return None
