@@ -4,7 +4,7 @@ from typing import Optional
 from pydantic import BaseModel, Field
 
 
-class FinancialBusinessMetrics(BaseModel):
+class FormData(BaseModel):
     """Financial and business metrics for a given reporting period."""
 
     arr: Optional[Decimal] = Field(
