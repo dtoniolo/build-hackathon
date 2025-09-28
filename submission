@@ -1,0 +1,45 @@
+# Submission  
+### VC KPI Reporting Tool  
+
+## Project Description  
+A lightweight reporting tool for VCs to collect portfolio KPIs in a structured way, validate submissions, and generate investor-ready outputs.  
+
+- **For founders**: upload KPIs via CSV/Excel, emails or a guided form, receive reminders, and get in-line validation and definitions to avoid errors  
+- **For funds**: view live dashboards of submissions, track red flags (e.g. short runway), and export clean, structured data for LP reports  
+
+This project was built in a single weekend hackathon sprint.  
+
+### How to Use  
+**Built today**  
+1. Founders upload KPI data (CSV, Excel, email, or form input).  
+2. System extracts and processes the data for structured storage.  
+3. Manual entry option available for missing or corrected fields.  
+
+**Planned scope (not yet built)**  
+- Automated validation (missing fields, unusual values).  
+- Fund team dashboards with submission status and portfolio views.  
+- Export functionality for LP-ready reports.  
+
+---
+
+## Team  
+- **Amina Ghafor** – Product Manager [LinkedIn](https://www.linkedin.com/in/amina-ghafor/)  
+- **Davide Toniolo** – Software Developer [LinkedIn](https://www.linkedin.com/in/dtoniolo/)  
+- **Rafael Murcia** – Data Scientist [LinkedIn](https://www.linkedin.com/in/rafael-murcia-hernandez-de-herrera/)  
+
+---
+
+## Assets & Documentation  
+- **Pitch Deck (Canva)**: [View here](https://www.canva.com/design/DAG0La-uW4Q/rCI_mCOrrr8JycOZsCY6PQ/edit?utm_content=DAG0La-uW4Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
+
+---
+
+## Tech Stack  
+- **Backend & Frontend**: Python 
+- **Package Manager**: [`uv`](https://docs.astral.sh/uv/)  
+- **Frameworks/Libraries**:  
+  - FastAPI (backend)
+  - Reflex (Web GUI)
+  - Pydantic (JSON parsing and serialization)
+  - Pandas (Excel parsing)  
+  - OpenAPI's Python client (LLMs)
