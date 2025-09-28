@@ -1,5 +1,4 @@
-# README  
-
+# BUILD Hackathon
 ## The Problem We Tackled  
 Funds and founders both waste time every reporting cycle:  
 - **Chasing** – VCs spend hours nudging portfolio companies across WhatsApp, Slack, and email to get KPIs submitted.  
@@ -32,12 +31,6 @@ We built a lightweight KPI reporting tool:
 - Alerts for red flags (e.g. short runway)  
 - Export to LP-ready reports (CSV, PDF)  
 
-**Technical choices:**  
-- Python for both backend and frontend (fast to prototype, single language for all layers)  
-- Flask + Jinja2 for the web interface  
-- Pandas for data handling and extraction  
-- [`uv`](https://docs.astral.sh/uv/) as the package manager for lightweight dependency management  
-
 ---
 
 ## Why It Matters and Possible Impact  
@@ -55,8 +48,6 @@ Long-term, this approach could become the default schema for portfolio reporting
 - **Tools**:  
   - [Canva Pitch Deck](https://www.canva.com/design/DAG0La-uW4Q/rCI_mCOrrr8JycOZsCY6PQ/edit?utm_content=DAG0La-uW4Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)  
   - DALL·E for concept illustrations and UI mockups used in the presentation  
-
-## Project Structure  
 
 
 
@@ -89,3 +80,35 @@ Long-term, this approach could become the default schema for portfolio reporting
 - Export portfolio data, to include in LP reports  
 - Configure which KPIs are required, to keep reporting consistent  
 - Upload or manually enter KPI data on behalf of founders, when founders provide data outside the system (e.g. by email), so the portfolio remains complete and up to date  
+
+---
+
+## Technical Stuff
+### Libraries and Tools
+- Python for both backend and frontend (fast to prototype, single language for all layers)
+- [`uv`](https://docs.astral.sh/uv/) as the package manager for lightweight dependency management
+- [FastAPI](https://fastapi.tiangolo.com) for the backend.
+- [Pydantic](https://docs.pydantic.dev/) for JSON parsing and serialization.
+- [Pandas](https://pandas.pydata.org) for parsing excel data
+- [Reflex](https://reflex.dev) for the web GUI.
+
+### Installation
+We use [`uv`](https://docs.astral.sh/uv/) as our package manager. See [here](https://docs.astral.sh/uv/) for installation instructions.
+
+### Running the Code
+- You can run the CI checks with the `uv run pre_commit_script.py` command.
+- You can run the backend with the `uv run fastapi dev backend/ --port 8001` command.
+- You can start the GUI by running the `uv run reflex run` command.
+
+### Project Structure
+The code is divided in two parts: backend and frontend. Both are implemented in Python.
+
+```
+hackathon/
+├── backend/             # Source code for the backend
+├── commons/             # Data structures and logic that's shared between the frontend and the backend
+├── frontend/            # Source code for the frontend
+├── pre_commit_script.py # Runs the CI
+├── pyproject.toml       # Project file
+└── rxconfig.py          # Configuration file for the GUI
+```

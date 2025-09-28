@@ -3,9 +3,21 @@ name = "hackathon"
 version = "0.1.0"
 requires-python = ">=3.13,<3.14"
 dependencies = [
+"dotenv>=0.9,<0.10",
+"fastapi[standard]>=0.117,<0.118",
 "loguru>=0.7,<0.8",
 "mypy>=1.18,<1.19",
+"openai>=1.109,<1.110",
+"pandas>=2.3,<2.4",
+"pandas-stubs>=2.2,<2.3",
 "pydantic>=2.11,<2.12",
+"reflex>=0.8,<0.9",
+"requests>=2.32,<2.33",
 "ruff>=0.13,<0.14",
 "tomlkit>=0.13,<0.14",
+
+"types-requests",
 ]
+
+[project.scripts]
+gui = "frontend:create_app"

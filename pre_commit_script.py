@@ -44,7 +44,13 @@ def main() -> None:
     with error code `1` as soon as an error is found.
 
     """
-    PYTHON_FILES = ["pre_commit_script.py", "src"]
+    PYTHON_FILES = [
+        "backend",
+        "commons",
+        "frontend",
+        "pre_commit_script.py",
+        "rxconfig.py",
+    ]
     """Stores the paths of the files and folders that contain Python code."""
 
     # Lint the Python files
