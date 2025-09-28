@@ -1,0 +1,40 @@
+Hola César,  
+
+Aquí tienes la información de Q1 2025, recopilada en formato tabla para que quede más claro.  
+
+| Métrica | Valor | Comentario |
+|---------|-------|------------|
+| Clientes totales | 3250 | Crecimiento sólido frente a Q4 2024 |
+| Ingresos del trimestre | €1,780,000 | Crecimiento sólido frente a Q4 2024 |
+| ARR | €7,100,000 | Estimación basada en contratos activos |
+| Leads generados | 1,200 | Principalmente vía campañas online |
+| EBITDA (LTM) | €880,000 | Últimos 12 meses cerrados a marzo |
+| EBIT (LTM) | €640,000 | Últimos 12 meses cerrados a marzo |
+| Impuesto de sociedades (LTM) | €140,000 | Acumulado |
+| Activos totales | €5,300,000 | A cierre de trimestre |
+| Activos intangibles | €1,050,000 | Mayoritariamente software |
+| Deuda | €1,200,000 | Bruta a fin de trimestre |
+| Deuda/EBITDA | 1.36x | Ratio sobre últimos 12 meses |
+| % ventas internacionales | 41% | Crecimiento en LatAm y sur de Europa |
+| Empleados | 94 | Plantilla total |
+| Mujeres en plantilla | 38 | 40% aprox. |
+| C-levels | 4 | Comité directivo |
+| Mujeres en C-levels | 1 | Sin cambios frente a Q4 |
+| Miembros del consejo | 5 | Total board |
+| Mujeres en el consejo | 2 | Incluye nueva incorporación |
+| Burn mensual | €150,000 | Promedio del trimestre |
+| Runway | 14 meses | Con caja actual |
+| Margen bruto | 74% | Estimado |
+| Churn anual de clientes | 6% | (logo churn) |
+| Churn anual de ingresos | 8% | |
+| Retención neta de ingresos (NRR) | 112% | |
+| ACV medio | €9,000 | Promedio contrato anual |
+| Payback sobre CAC | 18 meses | Calculado con cohortes recientes |
+| % ingresos en ventas & marketing | 32% | Sobre revenue total |
+| % ingresos en administración y generales | 15% | |
+| % ingresos en I+D | 22% | |
+
+Si necesitas algún desglose más detallado (por regiones, segmentos o cohortes de clientes), lo puedo preparar en un Excel aparte.  
+
+Un abrazo,  
+Marina  
