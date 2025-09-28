@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 
+from ..commons import FinancialBusinessMetrics
 from .db import Report, SubmissionState, load_db, save_db
 from .file_to_metrics import parse_excel_to_metrics, parse_text_to_metrics
 
@@ -46,3 +47,7 @@ async def parse_startup_report(file: UploadFile = File(...)):
         return JSONResponse(content=metrics.model_dump())
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Failed to parse Excel: {str(e)}")
+
+@app.post("/startup-report/draft")
+async def uplod_draft(form_data: FinancialBusinessMetrics):
+    db.append(Report(form_data=form_data, state=SubmissionState.DRAFT))
