@@ -48,6 +48,12 @@ async def parse_startup_report(file: UploadFile = File(...)):
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Failed to parse Excel: {str(e)}")
 
+
 @app.post("/startup-report/draft")
 async def uplod_draft(form_data: FinancialBusinessMetrics):
     db.append(Report(form_data=form_data, state=SubmissionState.DRAFT))
+
+
+@app.post("/startup-report/final")
+async def uplod_final(form_data: FinancialBusinessMetrics):
+    db.append(Report(form_data=form_data, state=SubmissionState.FINALIZED))
