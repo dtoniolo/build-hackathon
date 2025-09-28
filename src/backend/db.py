@@ -3,7 +3,7 @@ from enum import Enum, unique
 
 from pydantic import BaseModel
 
-from ..commons import FinancialBusinessMetrics
+from ..commons import FormData
 
 
 @unique
@@ -13,7 +13,7 @@ class SubmissionState(Enum):
 
 
 class Report(BaseModel):
-    form_data: FinancialBusinessMetrics
+    form_data: FormData
     state: SubmissionState
 
 

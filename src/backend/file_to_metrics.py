@@ -3,7 +3,7 @@ from openai import OpenAI
 
 from dotenv import load_dotenv
 
-from src.commons import FinancialBusinessMetrics
+from src.commons import FormData
 
 load_dotenv()
 
@@ -44,25 +44,25 @@ def call_openai(prompt: str) -> str:
 
 def parse_excel_to_metrics(
     file_contents: str, template_path: str = "template.txt"
-) -> FinancialBusinessMetrics:
-    """Parses metrics from an Excel file into FinancialBusinessMetrics."""
+) -> FormData:
+    """Parses metrics from an Excel file into FormData."""
     content_text = excel_to_text(file_contents)
     template_text = load_prompt_template(template_path)
     prompt = build_prompt(template_text, content_text)
 
     result_json = call_openai(prompt)
-    return FinancialBusinessMetrics.model_validate_json(result_json)
+    return FormData.model_validate_json(result_json)
 
 
 def parse_text_to_metrics(
     file_content: str, template_path: str = "template.txt"
-) -> FinancialBusinessMetrics:
-    """Parses metrics from plain text/CSV into FinancialBusinessMetrics."""
+) -> FormData:
+    """Parses metrics from plain text/CSV into FormData."""
     template_text = load_prompt_template(template_path)
     prompt = build_prompt(template_text, file_content)
 
     result_json = call_openai(prompt)
-    return FinancialBusinessMetrics.model_validate_json(result_json)
+    return FormData.model_validate_json(result_json)
 
 
 if __name__ == "__main__":
